@@ -6,12 +6,13 @@
 
 <!--
     Copyright 2020 Joyent, Inc.
+    Copyright 2024 MNX Cloud, Inc.
 -->
 
 # triton-kbmapi: Key backup and management service
 
-This repository is part of the Joyent Triton project. See the [contribution
-guidelines](https://github.com/joyent/triton/blob/master/CONTRIBUTING.md) --
+This repository is part of the Triton Data Center project. See the [contribution
+guidelines](https://github.com/TritonDataCenter/triton/blob/master/CONTRIBUTING.md) --
 
 ## Development
 
@@ -69,7 +70,7 @@ admin key and puk (which is different from the pin) to effectively seal the YK
     make test
 
 Note you need PostgreSQL installed on the machine you're running the tests from
-due to [node-moray-sandbox](https://github.com/joyent/node-moray-sandbox). See
+due to [node-moray-sandbox](https://github.com/TritonDataCenter/node-moray-sandbox). See
 that repo's README for the details.
 
 Unit tests can also run with:
