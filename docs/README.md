@@ -45,12 +45,13 @@
 
 <!--
     Copyright 2020 Joyent, Inc.
+    Copyright 2024 MNX Cloud, Inc.
 -->
 
 
 The goal of this is to provide an API that will be used to manage the
 pivtokens on Triton compute nodes containing encrypted zpools.
-The details are largely in [RFD 173](https://github.com/joyent/rfd/blob/master/rfd/0173/README.adoc) still.
+The details are largely in [RFD 173](https://github.com/TritonDataCenter/rfd/blob/master/rfd/0173/README.adoc) still.
 
 The tl;dr is that when a CN boots, it will authenticate itself to KBMAPI,
 and then request the pin to unlock its local PIV token.  Once unlocked, it
@@ -65,7 +66,7 @@ authenticated entity.
 When a PIV token is added, the KBMAPI service will need to generate a recovery
 pivtoken (a random blob of data) that will be stored on the CN.  The recovery
 token serves two purposes:  First, it is used by the CN as the recovery key
-as described in [Provisioning and backups](https://github.com/joyent/rfd/blob/master/rfd/0077/README.adoc#prov-backups).
+as described in [Provisioning and backups](https://github.com/TritonDataCenter/rfd/blob/master/rfd/0077/README.adoc#prov-backups).
 Second, it is also used by the CN as a shared secret with KBMAPI for the purposes
 of replacing the PIV token information of a CN with the data from a new PIV token.
 
